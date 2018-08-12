@@ -27,7 +27,7 @@ A MEAN Stack todo list application.
 ## Next Steps
 - [X] - move inputs into form
 - [X] - are you sure when deleting
-- [ ] - move completed tasks to bottom of list
+- [X] - move completed tasks to bottom of list
 - [X] - add category field for tasks
 - [ ] - add validation to the form
 - [ ] - add more styling

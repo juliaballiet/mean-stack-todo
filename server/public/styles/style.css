@@ -26,6 +26,13 @@ table, th, td {
     text-decoration: line-through;
 }
 
+.done {
+    height: 25px;
+    width: 25px;
+    font-size: 18px;
+    padding-left: 6px;
+}
+
 #task {
     width: 500px;
     text-align: left;
