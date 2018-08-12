@@ -30,7 +30,7 @@ Completed Features
 [X] - set up angular app and controller in client.js and index.html
 [X] - create router with mongoose schema
 [X] - server-side GET route
-[ ] - server-side POST route
+[X] - server-side POST route
 [ ] - server-side DELETE route
 [ ] - client-side GET route
 [ ] - client-side POST route

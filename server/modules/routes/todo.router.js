@@ -22,4 +22,14 @@ router.get('/', (req, res) => {
     });
 });
 
+router.post('/', (req, res) => {
+    let toDoItemFromClient = req.body;
+    const toDoItem = new ToDo(toDoItemFromClient);
+    toDoItem.save().then(() => {
+        res.sendStatus(201);
+    }).catch((error) => {
+        res.sendStatus(500);
+    });
+});
+
 module.exports = router;
