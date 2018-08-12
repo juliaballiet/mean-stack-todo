@@ -12,6 +12,14 @@ const ToDoSchema = new Schema ({
 
 const ToDo = mongoose.model('ToDoList', ToDoSchema);
 
+// routes
 
+router.get('/', (req, res) => {
+    ToDo.find({}).then((found) => {
+        res.send(found);
+    }).catch((error) => {
+        res.sendStatus(500);
+    });
+});
 
 module.exports = router;

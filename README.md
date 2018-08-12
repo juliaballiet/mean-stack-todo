@@ -28,8 +28,8 @@ Completed Features
 [X] - set up and spin up server
 [X] - basic HTML and styling
 [X] - set up angular app and controller in client.js and index.html
-[ ] - create router with mongoose schema
-[ ] - server-side GET route
+[X] - create router with mongoose schema
+[X] - server-side GET route
 [ ] - server-side POST route
 [ ] - server-side DELETE route
 [ ] - client-side GET route

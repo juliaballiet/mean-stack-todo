@@ -20,6 +20,7 @@ mongoose.connection.on('error', () => {
 app.use(express.static('server/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use('/todo', toDoRouter);
 
 // spin up server
 app.listen(PORT, () => {
