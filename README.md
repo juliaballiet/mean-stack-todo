@@ -32,10 +32,11 @@ Completed Features
 [X] - server-side GET route
 [X] - server-side POST route
 [X] - server-side DELETE route
-[ ] - client-side GET route
-[ ] - client-side POST route
-[ ] - client-side DELETE route
-[ ] - client-side logic
+[X] - client-side GET route
+[X] - client-side POST route
+[X] - client-side DELETE route
+[ ] - client-side PUT route
+[ ] - server-side PUT route
 
 Next Steps
 Features that you would like to add at some point in the future.
