@@ -27,7 +27,7 @@ Completed Features
 [X] - set up project folder with all necessary files
 [X] - set up and spin up server
 [X] - basic HTML and styling
-[ ] - set up angular app and controller in client.js and index.html
+[X] - set up angular app and controller in client.js and index.html
 [ ] - create router with mongoose schema
 [ ] - server-side GET route
 [ ] - server-side POST route
