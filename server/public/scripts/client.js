@@ -21,7 +21,8 @@ toDoApp.controller('ToDoController', function($http){
     vm.addListItem = function(){
         console.log('addListItem');
         let dataToSend = {
-            task: vm.input
+            task: vm.input,
+            category: vm.category
         }
         $http({
             method: 'POST',
@@ -30,6 +31,7 @@ toDoApp.controller('ToDoController', function($http){
         }).then(function(response){
             console.log('back from server with: ', response);
             vm.getToDoList();
+            vm.input = ''
         }).catch(function(error){
             console.log(error);
             alert('there was a problem getting the data');

@@ -25,10 +25,10 @@ A MEAN Stack todo list application.
 - [X] - complete README.md file
 
 ## Next Steps
-- [ ] - move inputs into form
+- [X] - move inputs into form
 - [ ] - are you sure when deleting
 - [ ] - move completed tasks to bottom of list
-- [ ] - add category field for tasks
+- [X] - add category field for tasks
 - [ ] - add validation to the form
 - [ ] - add more styling
 

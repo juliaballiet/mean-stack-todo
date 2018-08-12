@@ -7,6 +7,7 @@ const Schema = mongoose.Schema;
 // schema
 const ToDoSchema = new Schema ({
     task: {type: String},
+    category: {type: String},
     completed: {type: Boolean, default: false}
 });
 

@@ -13,12 +13,21 @@
     <div ng-controller="ToDoController as tc">
         <h1>to do list</h1>
         <div>
-            <input ng-model="tc.input" type="text">
-            <button ng-click="tc.addListItem()">create new list item</button>
+            <form ng-submit="tc.addListItem()">
+                <input ng-model="tc.input" type="text">
+                <select ng-model="tc.category">
+                    <option value="" disabled>choose a category</option>
+                    <option value="school">school</option>
+                    <option value="home">home</option>
+                    <option value="work">work</option>
+                </select>
+                <button>create new list item</button>
+            </form>
             <table>
                 <thead>
                     <tr>
                         <th id="task">task</th>
+                        <th>category</th>
                         <th>complete</th>
                         <th>remove</th>
                     </tr>
@@ -26,7 +35,8 @@
                 <tbody>
                     <tr ng-repeat="item in tc.toDoArray" ng-class="{complete: item.completed == true}">
                         <td>{{item.task}}</td>
-                        <td><button ng-click="tc.completeTask(item._id)">complete</button></td>
+                        <td>{{item.category}}</td>
+                        <td><button ng-click="tc.completeTask(item._id)" ng-disabled="item.completed">complete</button></td>
                         <td><button ng-click="tc.deleteTask(item._id)">remove</button></td>
                     </tr>
                 </tbody>
