@@ -22,6 +22,10 @@ table, th, td {
     padding: 10px;
 }
 
+.complete {
+    text-decoration: line-through;
+}
+
 #task {
     width: 500px;
     text-align: left;

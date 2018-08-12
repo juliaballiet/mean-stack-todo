@@ -10,7 +10,7 @@ toDoApp.controller('ToDoController', function($http){
             method: 'GET',
             url: '/todo'
         }).then(function(response){
-            console.log('getToDoList GET');
+            console.log('back from server with: ', response.data);
             vm.toDoArray = response.data;
         }).catch(function(error){
             console.log(error);

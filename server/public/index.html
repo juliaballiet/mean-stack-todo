@@ -24,7 +24,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="item in tc.toDoArray">
+                    <tr ng-repeat="item in tc.toDoArray" ng-class="{complete: item.completed == true}">
                         <td>{{item.task}}</td>
                         <td><button ng-click="tc.completeTask(item._id)">complete</button></td>
                         <td><button ng-click="tc.deleteTask(item._id)">remove</button></td>
