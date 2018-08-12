@@ -3,15 +3,25 @@ let toDoApp = angular.module('toDoApp', []);
 toDoApp.controller('ToDoController', function($http){
     let vm = this;
     vm.toDoArray = [];
+    vm.completeArray = [];
 
     vm.getToDoList = function(){
         console.log('getToDoList');
+        vm.toDoArray = [];
+        vm.completeArray = [];
         $http({
             method: 'GET',
             url: '/todo'
         }).then(function(response){
             console.log('back from server with: ', response.data);
-            vm.toDoArray = response.data;
+            arrayFromServer = response.data;
+            for (let task of arrayFromServer) {
+                if (task.completed === true){
+                    vm.completeArray.push(task);
+                } else {
+                    vm.toDoArray.push(task);
+                }
+            }
         }).catch(function(error){
             console.log(error);
             alert('there was a problem getting the data');

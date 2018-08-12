@@ -26,19 +26,25 @@
             <table>
                 <thead>
                     <tr>
+                        <th>done</th>
                         <th id="task">task</th>
                         <th>category</th>
-                        <th>complete</th>
                         <th>remove</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="item in tc.toDoArray" ng-class="{complete: item.completed == true}">
+                    <tr ng-repeat="item in tc.toDoArray">
+                        <td><button ng-disabled="item.completed" ng-click="tc.completeTask(item._id)"></button></td>
                         <td>{{item.task}}</td>
                         <td>{{item.category}}</td>
-                        <td><button ng-click="tc.completeTask(item._id)" ng-disabled="item.completed">complete</button></td>
                         <td><button ng-click="tc.deleteTask(item._id)">remove</button></td>
                     </tr>
+                    <tr ng-repeat="item in tc.completeArray">
+                            <td><button disabled></button></td>
+                            <td class="complete">{{item.task}}</td>
+                            <td>{{item.category}}</td>
+                            <td><button ng-click="tc.deleteTask(item._id)">remove</button></td>
+                        </tr>
                 </tbody>
             </table>
         </div>
