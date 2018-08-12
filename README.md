@@ -9,20 +9,6 @@ Express
 AngularJS
 Node
 
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-Installing
-Steps to get the development environment running.
-
-Download this project.
-npm install
-npm start
-And so on...
-
-Screen Shot
-Include one or two screen shots of your project here (optional). Remove if unused.
-
 Completed Features
 [X] - set up project folder with all necessary files
 [X] - set up and spin up server
@@ -38,13 +24,15 @@ Completed Features
 [X] - client-side PUT route
 [X] - server-side PUT route
 [X] - change styling if task is complete
-[ ] - complete README.md file
+[X] - complete README.md file
 
 Next Steps
-Features that you would like to add at some point in the future.
+[ ] - move inputs into form
+[ ] - are you sure when deleting
+[ ] - move completed tasks to bottom of list
+[ ] - add category field for tasks
+[ ] - add validation to the form
+[ ] - add more styling
 
- Feature c
 Authors
-Name of author(s)
-Acknowledgments
-Hat tip to anyone who's code was used
+Julia Balliet
