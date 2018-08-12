@@ -26,7 +26,7 @@ Include one or two screen shots of your project here (optional). Remove if unuse
 Completed Features
 [X] - set up project folder with all necessary files
 [X] - set up and spin up server
-[ ] - basic HTML and styling
+[X] - basic HTML and styling
 [ ] - set up angular app and controller in client.js and index.html
 [ ] - create router with mongoose schema
 [ ] - server-side GET route
