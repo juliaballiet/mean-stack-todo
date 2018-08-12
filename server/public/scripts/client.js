@@ -49,5 +49,18 @@ toDoApp.controller('ToDoController', function($http){
         })
     }
 
+    vm.completeTask = function(id){
+        $http({
+            method: 'PUT',
+            url: '/todo/complete/' + id
+        }).then(function(response){
+            console.log('back from server with: ', response);
+            vm.getToDoList();
+        }).catch(function(error){
+            console.log(error);
+            alert('there was a problem completing the task');
+        })
+    }
+
     vm.getToDoList();
 })

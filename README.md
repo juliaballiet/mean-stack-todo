@@ -37,6 +37,8 @@ Completed Features
 [X] - client-side DELETE route
 [ ] - client-side PUT route
 [ ] - server-side PUT route
+[ ] - change styling if task is complete
+[ ] - complete README.md file
 
 Next Steps
 Features that you would like to add at some point in the future.
