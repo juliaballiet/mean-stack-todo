@@ -35,8 +35,8 @@ Completed Features
 [X] - client-side GET route
 [X] - client-side POST route
 [X] - client-side DELETE route
-[ ] - client-side PUT route
-[ ] - server-side PUT route
+[X] - client-side PUT route
+[X] - server-side PUT route
 [ ] - change styling if task is complete
 [ ] - complete README.md file
 

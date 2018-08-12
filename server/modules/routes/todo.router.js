@@ -40,4 +40,15 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+router.put('/complete/:id', (req, res) => {
+    ToDo.findById(req.params.id).then((found) => {
+        found.completed = true;
+        found.save().then((response) => {
+            res.sendStatus(201);
+        })
+    }).catch((error) => {
+        res.sendStatus(500);
+    })
+})
+
 module.exports = router;
