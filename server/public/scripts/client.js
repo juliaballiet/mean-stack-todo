@@ -39,16 +39,20 @@ toDoApp.controller('ToDoController', function($http){
     }
 
     vm.deleteTask = function(id){
-        $http({
-            method: 'DELETE',
-            url: '/todo/' + id
-        }).then(function(response){
-            console.log('back from server with: ', response);
-            vm.getToDoList();
-        }).catch(function(error){
-            console.log(error);
-            alert('there was a problem deleting the data');
-        })
+        let confirmation = confirm('are you sure?');
+        if(confirmation == true){
+            $http({
+                method: 'DELETE',
+                url: '/todo/' + id
+            }).then(function(response){
+                console.log('back from server with: ', response);
+                vm.getToDoList();
+            }).catch(function(error){
+                console.log(error);
+                alert('there was a problem deleting the data');
+            })
+        }
+        
     }
 
     vm.completeTask = function(id){
