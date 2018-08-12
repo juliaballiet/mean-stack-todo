@@ -25,7 +25,15 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     let toDoItemFromClient = req.body;
     const toDoItem = new ToDo(toDoItemFromClient);
-    toDoItem.save().then(() => {
+    toDoItem.save().then((response) => {
+        res.sendStatus(201);
+    }).catch((error) => {
+        res.sendStatus(500);
+    });
+});
+
+router.delete('/:id', (req, res) => {
+    ToDo.findByIdAndRemove(req.params.id).then((response) => {
         res.sendStatus(201);
     }).catch((error) => {
         res.sendStatus(500);

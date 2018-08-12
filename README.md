@@ -31,7 +31,7 @@ Completed Features
 [X] - create router with mongoose schema
 [X] - server-side GET route
 [X] - server-side POST route
-[ ] - server-side DELETE route
+[X] - server-side DELETE route
 [ ] - client-side GET route
 [ ] - client-side POST route
 [ ] - client-side DELETE route
