@@ -2,10 +2,10 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const PORT = process.env.PORT || 5000;
-const toDoRouter = require('./modules/routes/todo.router');
 const mongoose = require('mongoose');
 const mongoURI = 'mongodb://localhost:27017/todo'
+const toDoRouter = require('./modules/routes/todo.router');
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(mongoURI, {useNewUrlParser: true});
 

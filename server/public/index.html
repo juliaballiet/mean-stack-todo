@@ -10,9 +10,11 @@
     <title>MEAN Stack To Do List</title>
 </head>
 <body ng-app="toDoApp">
-    <div ng-controller="ToDoController as tdc">
+    <div ng-controller="ToDoController as tc">
         <h1>to do list</h1>
         <div>
+            <input ng-model="tc.input" type="text">
+            <button ng-click="tc.addListItem()">create new list item</button>
             <table>
                 <thead>
                     <tr>
@@ -22,8 +24,8 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>do laundry</td>
+                    <tr ng-repeat="item in tc.toDoArray">
+                        <td>{{item.task}}</td>
                         <td><button>complete</button></td>
                         <td><button>remove</button></td>
                     </tr>
