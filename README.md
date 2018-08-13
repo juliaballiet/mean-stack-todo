@@ -1,5 +1,5 @@
 # MEAN Stack ToDo
-A MEAN Stack todo list application.
+A MEAN Stack to do list application with the ability to create tasks, mark them complete, filter by category, and delete. To get started, fork and clone this repository and run `npm install` and `npm start`.
 
 ## Built With
 - MongoDB
