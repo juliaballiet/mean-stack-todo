@@ -8,14 +8,6 @@ h1 {
     border-bottom: 2px dashed black;
 }
 
-input {
-    width: 400px;
-    margin: 20px;
-    border: 1px solid black;
-    outline: none;
-    margin: 30px;
-    padding: 5px;
-}
 
 select {
     outline: none;
@@ -62,6 +54,20 @@ table, th, td {
     border: 1px solid red;
     color: red;
     margin-left: 16px;
+}
+
+#filter-div {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+#input {
+    width: 400px;
+    margin: 20px;
+    border: 1px solid black;
+    outline: none;
+    margin: 30px;
+    padding: 5px;
 }
 
 #submit {

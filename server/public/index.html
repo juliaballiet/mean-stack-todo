@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
     <script src="scripts/client.js"></script>
     <title>MEAN Stack To Do List</title>
 </head>
+
 <body ng-app="toDoApp">
     <div ng-controller="ToDoController as tc">
         <h1>to do list</h1>
         <div>
             <form ng-submit="tc.addListItem()">
-                <input ng-model="tc.input" type="text" required>
+                <input id="input" ng-model="tc.input" type="text" required>
                 <select ng-model="tc.category" required>
                     <option value="" disabled>category</option>
                     <option value="school">school</option>
@@ -23,6 +25,17 @@
                 </select>
                 <button id="submit">create new list item</button>
             </form>
+            <div id="filter-div">
+                    show category:
+                    <input type="radio" name="category" ng-click="tc.changeFilter('')" id="all" checked>
+                    <label for="all">all</label>
+                    <input type="radio" name="category" ng-click="tc.changeFilter('school')" id="school">
+                    <label for="school">school</label>
+                    <input type="radio" name="category" ng-click="tc.changeFilter('work')" id="work">
+                    <label for="work">work</label>
+                    <input type="radio" name="category" ng-click="tc.changeFilter('home')" id="home">
+                    <label for="home">home</label>
+            </div>
             <table>
                 <thead>
                     <tr>
@@ -33,21 +46,30 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="item in tc.toDoArray">
-                        <td><button class="done" ng-click="tc.completeTask(item._id)"></button></td>
+                    <tr ng-repeat="item in tc.toDoArray | filter:{category:tc.filterByValue}">
+                        <td>
+                            <button class="done" ng-click="tc.completeTask(item._id)"></button>
+                        </td>
                         <td>{{item.task}}</td>
                         <td>{{item.category}}</td>
-                        <td><button class="remove" ng-click="tc.deleteTask(item._id)">X</button></td>
+                        <td>
+                            <button class="remove" ng-click="tc.deleteTask(item._id)">X</button>
+                        </td>
                     </tr>
-                    <tr ng-repeat="item in tc.completeArray">
-                            <td><button class="done" disabled>✓</button></td>
-                            <td class="complete">{{item.task}}</td>
-                            <td>{{item.category}}</td>
-                            <td><button class="remove" ng-click="tc.deleteTask(item._id)">X</button></td>
-                        </tr>
+                    <tr ng-repeat="item in tc.completeArray | filter:{category:tc.filterByValue}">
+                        <td>
+                            <button class="done" disabled>✓</button>
+                        </td>
+                        <td class="complete">{{item.task}}</td>
+                        <td>{{item.category}}</td>
+                        <td>
+                            <button class="remove" ng-click="tc.deleteTask(item._id)">X</button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </body>
+
 </html>

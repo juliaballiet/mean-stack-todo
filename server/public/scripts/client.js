@@ -5,6 +5,8 @@ toDoApp.controller('ToDoController', function($http){
     vm.toDoArray = [];
     vm.completeArray = [];
 
+    vm.filterByValue = '';
+
     vm.getToDoList = function(){
         console.log('getToDoList');
         vm.toDoArray = [];
@@ -76,6 +78,11 @@ toDoApp.controller('ToDoController', function($http){
             console.log(error);
             alert('there was a problem completing the task');
         })
+    }
+
+    vm.changeFilter = function(filter){
+        console.log('change to: ', filter);
+        vm.filterByValue = filter;
     }
 
     vm.getToDoList();
