@@ -16,12 +16,12 @@
             <form ng-submit="tc.addListItem()">
                 <input ng-model="tc.input" type="text" required>
                 <select ng-model="tc.category" required>
-                    <option value="" disabled>choose a category</option>
+                    <option value="" disabled>category</option>
                     <option value="school">school</option>
                     <option value="home">home</option>
                     <option value="work">work</option>
                 </select>
-                <button>create new list item</button>
+                <button id="submit">create new list item</button>
             </form>
             <table>
                 <thead>
@@ -37,13 +37,13 @@
                         <td><button class="done" ng-click="tc.completeTask(item._id)"></button></td>
                         <td>{{item.task}}</td>
                         <td>{{item.category}}</td>
-                        <td><button ng-click="tc.deleteTask(item._id)">remove</button></td>
+                        <td><button class="remove" ng-click="tc.deleteTask(item._id)">X</button></td>
                     </tr>
                     <tr ng-repeat="item in tc.completeArray">
-                            <td><button class="done" disabled>X</button></td>
+                            <td><button class="done" disabled>✓</button></td>
                             <td class="complete">{{item.task}}</td>
                             <td>{{item.category}}</td>
-                            <td><button ng-click="tc.deleteTask(item._id)">remove</button></td>
+                            <td><button class="remove" ng-click="tc.deleteTask(item._id)">X</button></td>
                         </tr>
                 </tbody>
             </table>

@@ -29,8 +29,8 @@ A MEAN Stack todo list application.
 - [X] - are you sure when deleting
 - [X] - move completed tasks to bottom of list
 - [X] - add category field for tasks
-- [ ] - add validation to the form
-- [ ] - add more styling
+- [X] - add validation to the form
+- [X] - add more styling
 
 ## Authors
 Julia Balliet

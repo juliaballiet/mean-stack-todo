@@ -11,6 +11,20 @@ h1 {
 input {
     width: 400px;
     margin: 20px;
+    border: 1px solid black;
+    outline: none;
+    margin: 30px;
+    padding: 5px;
+}
+
+select {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 1px;
+    padding: 5px;
+    height: 25px;
+    width: 75px;
+    background-color: white;
 }
 
 table {
@@ -31,6 +45,30 @@ table, th, td {
     width: 25px;
     font-size: 18px;
     padding-left: 6px;
+    border: 1px solid black;
+    margin-left: 7px;
+}
+
+.done:disabled {
+    border: 1px solid green;
+    color: green;
+}
+
+.remove {
+    height: 25px;
+    width: 25px;
+    font-size: 18px;
+    padding-left: 6px;
+    border: 1px solid red;
+    color: red;
+    margin-left: 16px;
+}
+
+#submit {
+    border-radius: 1px;
+    border: 1px solid black;
+    margin: 30px;
+    padding: 5px;
 }
 
 #task {
