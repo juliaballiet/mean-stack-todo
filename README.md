@@ -7,6 +7,10 @@ A MEAN Stack to do list application with the ability to create tasks, mark them 
 - AngularJS
 - Node
 
+## Screen Shot
+
+![Screen Shot](server/public/images/screen_shot.png)
+
 ## Completed Features
 - [X] set up project folder with all necessary files
 - [X] set up and spin up server
